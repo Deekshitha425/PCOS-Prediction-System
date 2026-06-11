@@ -9,3 +9,4 @@ keras>=3.0.0
 Pillow>=10.0.0
 matplotlib>=3.7.0
 shap>=0.44.0
+lightgbm
