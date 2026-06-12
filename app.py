@@ -736,9 +736,9 @@ def plot_modality_donut(weights, probs):
 
 def plot_gradcam_overlay(img_pil, heatmap, alpha=0.45):
     """Returns matplotlib figure with GradCAM overlay."""
-    import matplotlib.cm as cm
+    import matplotlib.pyplot as plt
     img_arr  = np.array(img_pil.convert("RGB").resize((224, 224)))
-    colormap = cm.get_cmap("YlOrRd")
+    colormap = plt.get_cmap("YlOrRd")
     heat_c   = (colormap(heatmap)[:, :, :3] * 255).astype(np.uint8)
     overlay  = (img_arr * (1 - alpha) + heat_c * alpha).astype(np.uint8)
 
